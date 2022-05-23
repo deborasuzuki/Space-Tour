@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("./reset.scss");
+
+/* Fonts */
+* {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: "Bellefair", serif;
+}
+
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+}
+
+h6 {
+  font-size: 28px;
+}
+
+/* Colors */
+:root {
+  --dark-color: #0b0d17;
+  --light-color: #d0d6f9;
+  --white-color: #ffffff;
+}
