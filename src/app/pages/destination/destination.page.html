@@ -1,2 +1,5 @@
-<p>destination works!</p>
-<img src="../../../assets/destination/image-moon.png" />
+<div *ngFor="let item of allDestinations">
+  <p>{{ item.name }}</p>
+
+  <img [attr.src]="item.image" />
+</div>

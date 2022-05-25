@@ -1,7 +1,7 @@
 export interface SpaceData {
-  destination: Destination;
-  crew: Crew;
-  technology: Technology;
+  destination: Destination[];
+  crew: Crew[];
+  technology: Technology[];
 }
 
 export interface Destination {

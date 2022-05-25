@@ -8,6 +8,7 @@ import { DestinationPage } from './pages/destination/destination.page';
 import { HomePage } from './pages/home/home.page';
 import { TechnologyPage } from './pages/technology/technology.page';
 import { MenuComponent } from './components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { MenuComponent } from './components/menu/menu.component';
     TechnologyPage,
     MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
