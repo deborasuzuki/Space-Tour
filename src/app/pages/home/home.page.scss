@@ -6,7 +6,73 @@
   background-size: cover;
 
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-items: flex-end;
 
   padding-top: 40px;
+
+  section {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 165px;
+
+    margin-top: 250px;
+    width: 100%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    width: 445px;
+    h5,
+    p {
+      color: var(--light-color);
+    }
+
+    h1 {
+      color: var(--white-color);
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+    width: 445px;
+    &--white {
+      // box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: var(--white-color);
+      width: 275px;
+      height: 275px;
+      border-radius: 50%;
+
+      font-family: "Bellefair";
+      font-size: 32px;
+      color: var(--dark-color);
+
+      &:hover {
+        animation: pulsing-border 2.5s infinite;
+
+        @keyframes pulsing-border {
+          0% {
+            outline: 1px solid white;
+          }
+          100% {
+            outline: 80px solid rgba(255, 255, 255, 0.01);
+          }
+        }
+      }
+    }
+  }
 }

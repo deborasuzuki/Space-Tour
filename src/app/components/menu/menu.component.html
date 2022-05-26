@@ -5,24 +5,10 @@
   <div class="menu__line"></div>
   <div class="menu__options">
     <ul class="menu__options--tabs">
-      <li [class.active]="showContent == 'home'" (click)="showContent = 'home'">
-        HOME
-      </li>
-      <li
-        [class.active]="showContent == 'destination'"
-        (click)="showContent = 'destination'"
-      >
-        DESTINATION
-      </li>
-      <li [class.active]="showContent == 'crew'" (click)="showContent = 'crew'">
-        CREW
-      </li>
-      <li
-        [class.active]="showContent == 'tecnology'"
-        (click)="showContent = 'tecnology'"
-      >
-        TECHNOLOGY
-      </li>
+      <li routerLink="/home" routerLinkActive="active">HOME</li>
+      <li routerLink="/destination" routerLinkActive="active">DESTINATION</li>
+      <li routerLink="/crew" routerLinkActive="active">CREW</li>
+      <li routerLink="/tecnology" routerLinkActive="active">TECHNOLOGY</li>
     </ul>
   </div>
 </nav>

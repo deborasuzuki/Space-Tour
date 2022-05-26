@@ -7,7 +7,8 @@ import { DestinationPage } from './pages/destination/destination.page';
 import { HomePage } from './pages/home/home.page';
 
 const routes: Routes = [
-  { path: '', component: HomePage },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomePage },
   { path: 'destination', component: DestinationPage },
   { path: 'crew', component: CrewPage },
   { path: 'technology', component: TechnologyPage },
