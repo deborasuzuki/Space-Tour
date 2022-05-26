@@ -3,5 +3,26 @@
     <img src="../../../assets/shared/logo.svg" />
   </div>
   <div class="menu__line"></div>
-  <div class="menu__options"></div>
+  <div class="menu__options">
+    <ul class="menu__options--tabs">
+      <li [class.active]="showContent == 'home'" (click)="showContent = 'home'">
+        HOME
+      </li>
+      <li
+        [class.active]="showContent == 'destination'"
+        (click)="showContent = 'destination'"
+      >
+        DESTINATION
+      </li>
+      <li [class.active]="showContent == 'crew'" (click)="showContent = 'crew'">
+        CREW
+      </li>
+      <li
+        [class.active]="showContent == 'tecnology'"
+        (click)="showContent = 'tecnology'"
+      >
+        TECHNOLOGY
+      </li>
+    </ul>
+  </div>
 </nav>
