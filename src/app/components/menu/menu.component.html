@@ -4,11 +4,14 @@
   </div>
   <div class="menu__line"></div>
   <div class="menu__options">
-    <ul class="menu__options--tabs">
+    <button class="menu__options--mobileBtn" type="button" (click)="showMenu()">
+      <img src="../../../assets/shared/icon-hamburger.svg" />
+    </button>
+    <ul class="menu__options--tabs" id="mobile-menu">
       <li routerLink="/home" routerLinkActive="active">HOME</li>
       <li routerLink="/destination" routerLinkActive="active">DESTINATION</li>
       <li routerLink="/crew" routerLinkActive="active">CREW</li>
-      <li routerLink="/tecnology" routerLinkActive="active">TECHNOLOGY</li>
+      <li routerLink="/technology" routerLinkActive="active">TECHNOLOGY</li>
     </ul>
   </div>
 </nav>

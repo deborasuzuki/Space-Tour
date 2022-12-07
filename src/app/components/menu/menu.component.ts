@@ -17,4 +17,10 @@ export class MenuComponent implements OnInit {
   // }
 
   ngOnInit(): void {}
+
+  public showMenu() {
+    const showMenu = document
+      .getElementById('mobile-menu')
+      ?.classList.toggle('active');
+  }
 }
