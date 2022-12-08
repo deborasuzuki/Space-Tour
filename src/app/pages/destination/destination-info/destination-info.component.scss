@@ -1,0 +1,52 @@
+.destinationInfo {
+  width: 327px;
+  height: 250px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 56px;
+      text-transform: uppercase;
+      color: var(--white-color);
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--light-color);
+      text-align: center;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    background-color: var(--light-color);
+    opacity: 50%;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 30px 0;
+
+    h6 {
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: var(--white-color);
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--light-color);
+      text-align: center;
+    }
+  }
+}

@@ -8,10 +8,15 @@
 
     <nav class="destination__nav">
       <ul>
-        <li>MOON</li>
-        <li>MARS</li>
-        <li>EUROPA</li>
-        <li>TITAN</li>
+        <li
+          [class.active]="selectedDestination==='Moon'"
+          (click)="getAllDestinations(0)"
+        >
+          MOON
+        </li>
+        <li class="tabs" (click)="getAllDestinations(1)">MARS</li>
+        <li class="tabs" (click)="getAllDestinations(2)">EUROPA</li>
+        <li class="tabs" (click)="getAllDestinations(3)">TITAN</li>
       </ul>
     </nav>
 
@@ -19,8 +24,7 @@
       [destinationTitle]="title"
       [destinationDescription]="description"
       [destinationDistance]="distance"
-      [destinationTravel]="  travel: string;
-    "
+      [destinationTravel]="travel"
     ></destination-info>
   </section>
 </div>

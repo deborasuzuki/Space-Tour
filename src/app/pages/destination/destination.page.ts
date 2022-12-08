@@ -15,22 +15,25 @@ export class DestinationPage implements OnInit {
   distance: string;
   travel: string;
 
+  selectedDestination: string;
+
   constructor(private spaceData: SpaceDataService) {}
 
   async ngOnInit() {
-    this.getAllDestinations();
+    this.getAllDestinations(0);
   }
 
-  getAllDestinations(): any {
+  getAllDestinations(destination: number) {
     return this.spaceData.getDestination().subscribe(
       (data: Destination[]) => {
         this.allDestinations = data;
         console.log('Destinations', this.allDestinations);
-        this.image = this.allDestinations[0].image;
-        this.title = this.allDestinations[0].name;
-        this.description = this.allDestinations[0].description;
-        this.distance = this.allDestinations[0].distance;
-        this.travel = this.allDestinations[0].travel;
+        this.image = this.allDestinations[destination].image;
+        this.title = this.allDestinations[destination].name;
+        this.description = this.allDestinations[destination].description;
+        this.distance = this.allDestinations[destination].distance;
+        this.travel = this.allDestinations[destination].travel;
+        this.selectedDestination = this.allDestinations[destination].name;
       },
       (error: any) => {
         error;
