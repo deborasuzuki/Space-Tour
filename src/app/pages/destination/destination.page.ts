@@ -1,6 +1,6 @@
 import { SpaceDataService } from './../../services/space-data.service';
 import { Component, OnInit } from '@angular/core';
-import { Crew, Destination } from 'src/app/interfaces/SpaceData';
+import { Destination } from 'src/app/interfaces/SpaceData';
 
 @Component({
   selector: 'app-destination',
@@ -9,13 +9,16 @@ import { Crew, Destination } from 'src/app/interfaces/SpaceData';
 })
 export class DestinationPage implements OnInit {
   allDestinations: Destination[];
-  allCrew: Crew[];
+  image: string;
+  title: string;
+  description: string;
+  distance: string;
+  travel: string;
 
   constructor(private spaceData: SpaceDataService) {}
 
   async ngOnInit() {
     this.getAllDestinations();
-    this.getAllCrew();
   }
 
   getAllDestinations(): any {
@@ -23,18 +26,11 @@ export class DestinationPage implements OnInit {
       (data: Destination[]) => {
         this.allDestinations = data;
         console.log('Destinations', this.allDestinations);
-      },
-      (error: any) => {
-        error;
-      }
-    );
-  }
-
-  getAllCrew(): any {
-    return this.spaceData.getCrew().subscribe(
-      (data: Crew[]) => {
-        this.allCrew = data;
-        console.log('Crew', this.allCrew);
+        this.image = this.allDestinations[0].image;
+        this.title = this.allDestinations[0].name;
+        this.description = this.allDestinations[0].description;
+        this.distance = this.allDestinations[0].distance;
+        this.travel = this.allDestinations[0].travel;
       },
       (error: any) => {
         error;

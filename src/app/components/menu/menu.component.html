@@ -5,7 +5,7 @@
   <div class="menu__line"></div>
   <div class="menu__options">
     <button class="menu__options--mobileBtn" type="button" (click)="showMenu()">
-      <img src="../../../assets/shared/icon-hamburger.svg" />
+      <img [src]="menuIcon" />
     </button>
     <ul class="menu__options--tabs" id="mobile-menu">
       <li routerLink="/home" routerLinkActive="active">HOME</li>

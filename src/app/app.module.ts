@@ -9,6 +9,8 @@ import { HomePage } from './pages/home/home.page';
 import { TechnologyPage } from './pages/technology/technology.page';
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DestinationPictureComponent } from './pages/destination/destination-picture/destination-picture.component';
+import { DestinationInfoComponent } from './pages/destination/destination-info/destination-info.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     CrewPage,
     TechnologyPage,
     MenuComponent,
+    DestinationPictureComponent,
+    DestinationInfoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

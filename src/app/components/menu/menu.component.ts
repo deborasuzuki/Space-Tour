@@ -8,13 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
+  menuIcon: string = '../../../assets/shared/icon-hamburger.svg';
+
   constructor(private spaceData: SpaceDataService, private router: Router) {}
-
-  // showContent: string = 'home';
-
-  // isActive(instruction: any[]): boolean {
-  //   return this.router.isRouteActive(this.router.generate(instruction));
-  // }
 
   ngOnInit(): void {}
 
@@ -22,5 +18,9 @@ export class MenuComponent implements OnInit {
     const showMenu = document
       .getElementById('mobile-menu')
       ?.classList.toggle('active');
+
+    this.menuIcon == '../../../assets/shared/icon-close.svg'
+      ? (this.menuIcon = '../../../assets/shared/icon-hamburger.svg')
+      : (this.menuIcon = '../../../assets/shared/icon-close.svg');
   }
 }
