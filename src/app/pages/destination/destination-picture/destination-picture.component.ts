@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DestinationPictureComponent implements OnInit {
   @Input() destinationImage: string;
 
+  defaultImage: string = 'src/assets/destination/image-moon.png';
+
   constructor() {}
 
   ngOnInit(): void {}

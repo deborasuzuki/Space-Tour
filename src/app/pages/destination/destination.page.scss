@@ -1,6 +1,6 @@
 .destination {
-  height: 900px;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 100%;
   width: 100vw;
 
   background-image: url("../../../assets/destination/background-destination-mobile.jpg");
@@ -24,6 +24,18 @@
   h5 {
     color: var(--white-color);
     font-size: 16px;
+
+    @media (min-width: 768px) {
+      width: 100%;
+      text-align: left;
+      padding: 40px 0 0 75px;
+      font-size: 20px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 34px;
+      padding: 75px 0 0 166px;
+    }
   }
 
   section {
@@ -36,17 +48,28 @@
     margin-top: 32px;
     max-width: 1440px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
 
-      margin-top: clamp(10vh, 250px, 20vh);
-      padding: 0 100px;
+      margin-top: 100px;
+      padding: 0 165px;
+    }
+  }
+
+  &__loader {
+    width: 170px;
+    height: 170px;
+
+    @media (min-width: 768px) {
+      width: 300px;
+      height: 300px;
     }
 
     @media (min-width: 1440px) {
-      padding: 0 165px;
+      width: 445px;
+      height: 445px;
     }
   }
 
@@ -54,6 +77,13 @@
     color: var(--light-color);
     margin-top: 26px;
     width: 240px;
+    height: 28px;
+    margin: 20px auto;
+
+    @media (min-width: 1440px) {
+      width: 285px;
+      margin: 0 0 0 7px;
+    }
 
     ul {
       width: 100%;
@@ -79,6 +109,7 @@
 
         @media (min-width: 768px) {
           height: 100%;
+          font-size: 16px;
         }
 
         @media (min-width: 1024px) {

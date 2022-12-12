@@ -4,27 +4,33 @@
   <h5>PICK YOUR DESTINATION</h5>
 
   <section>
-    <destination-picture [destinationImage]="image"></destination-picture>
+    <destination-picture
+      *ngIf="image"
+      [destinationImage]="image"
+    ></destination-picture>
+    <div *ngIf="!image" class="destination__loader"></div>
 
-    <nav class="destination__nav">
-      <ul>
-        <li
-          [class.active]="selectedDestination==='Moon'"
-          (click)="getAllDestinations(0)"
-        >
-          MOON
-        </li>
-        <li class="tabs" (click)="getAllDestinations(1)">MARS</li>
-        <li class="tabs" (click)="getAllDestinations(2)">EUROPA</li>
-        <li class="tabs" (click)="getAllDestinations(3)">TITAN</li>
-      </ul>
-    </nav>
+    <div class="destination__main">
+      <nav class="destination__nav">
+        <ul>
+          <li
+            [class.active]="selectedDestination==='Moon'"
+            (click)="getAllDestinations(0)"
+          >
+            MOON
+          </li>
+          <li class="tabs" (click)="getAllDestinations(1)">MARS</li>
+          <li class="tabs" (click)="getAllDestinations(2)">EUROPA</li>
+          <li class="tabs" (click)="getAllDestinations(3)">TITAN</li>
+        </ul>
+      </nav>
 
-    <destination-info
-      [destinationTitle]="title"
-      [destinationDescription]="description"
-      [destinationDistance]="distance"
-      [destinationTravel]="travel"
-    ></destination-info>
+      <destination-info
+        [destinationTitle]="title"
+        [destinationDescription]="description"
+        [destinationDistance]="distance"
+        [destinationTravel]="travel"
+      ></destination-info>
+    </div>
   </section>
 </div>

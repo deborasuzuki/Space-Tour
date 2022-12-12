@@ -3,6 +3,16 @@
     img {
       width: 170px;
       height: 170px;
+
+      @media (min-width: 768px) {
+        width: 300px;
+        height: 300px;
+      }
+
+      @media (min-width: 1440px) {
+        width: 445px;
+        height: 445px;
+      }
     }
   }
 }
